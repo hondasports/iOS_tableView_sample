@@ -18,12 +18,12 @@
 		273E428A165224D100623D80 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 273E4289165224D100623D80 /* Default-568h@2x.png */; };
 		273E428D165224D100623D80 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 273E428B165224D100623D80 /* MainStoryboard_iPhone.storyboard */; };
 		273E4290165224D100623D80 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 273E428E165224D100623D80 /* MainStoryboard_iPad.storyboard */; };
-		273E4293165224D100623D80 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 273E4292165224D100623D80 /* ViewController.m */; };
 		273E429B165224D100623D80 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 273E429A165224D100623D80 /* SenTestingKit.framework */; };
 		273E429C165224D100623D80 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 273E4273165224D100623D80 /* UIKit.framework */; };
 		273E429D165224D100623D80 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 273E4275165224D100623D80 /* Foundation.framework */; };
 		273E42A5165224D100623D80 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 273E42A3165224D100623D80 /* InfoPlist.strings */; };
 		273E42A8165224D100623D80 /* sampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 273E42A7165224D100623D80 /* sampleTests.m */; };
+		273E42BB1652279000623D80 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 273E42BA1652279000623D80 /* ListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,14 +52,14 @@
 		273E4289165224D100623D80 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		273E428C165224D100623D80 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		273E428F165224D100623D80 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		273E4291165224D100623D80 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		273E4292165224D100623D80 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		273E4299165224D100623D80 /* sampleTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sampleTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		273E429A165224D100623D80 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		273E42A2165224D100623D80 /* sampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "sampleTests-Info.plist"; sourceTree = "<group>"; };
 		273E42A4165224D100623D80 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		273E42A6165224D100623D80 /* sampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sampleTests.h; sourceTree = "<group>"; };
 		273E42A7165224D100623D80 /* sampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sampleTests.m; sourceTree = "<group>"; };
+		273E42B91652279000623D80 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListViewController.h; path = ../ListViewController.h; sourceTree = "<group>"; };
+		273E42BA1652279000623D80 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListViewController.m; path = ../ListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,12 +119,12 @@
 		273E4279165224D100623D80 /* sample */ = {
 			isa = PBXGroup;
 			children = (
+				273E42B91652279000623D80 /* ListViewController.h */,
+				273E42BA1652279000623D80 /* ListViewController.m */,
 				273E4282165224D100623D80 /* AppDelegate.h */,
 				273E4283165224D100623D80 /* AppDelegate.m */,
 				273E428B165224D100623D80 /* MainStoryboard_iPhone.storyboard */,
 				273E428E165224D100623D80 /* MainStoryboard_iPad.storyboard */,
-				273E4291165224D100623D80 /* ViewController.h */,
-				273E4292165224D100623D80 /* ViewController.m */,
 				273E427A165224D100623D80 /* Supporting Files */,
 			);
 			path = sample;
@@ -276,7 +276,7 @@
 			files = (
 				273E4280165224D100623D80 /* main.m in Sources */,
 				273E4284165224D100623D80 /* AppDelegate.m in Sources */,
-				273E4293165224D100623D80 /* ViewController.m in Sources */,
+				273E42BB1652279000623D80 /* ListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +461,7 @@
 				273E42AD165224D100623D80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		273E42AE165224D100623D80 /* Build configuration list for PBXNativeTarget "sampleTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +470,7 @@
 				273E42B0165224D100623D80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
