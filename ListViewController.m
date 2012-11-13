@@ -32,6 +32,8 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    dates = [[NSArray alloc] initWithObjects:@"ひこにゃん", @"はばタン", @"せんとくん", @"くまモン", @"にしこくん", nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,24 +46,34 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    // 各セクション内のデータ数を返す
+    // 今回はセクションはないので、単にdatesの要素数を返す
+    // UITableViewDataSourceプロトコルを使用する場合は、必ずこのメソッドを実装する必要がある。
+//    return dates.count;
+    return dates.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    // セクションとはテーブルビュー内のレコードをグループ分けするための仕組み。
+    // サンプルではグループ分けしないので、１を指定。
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    // indexPath内にセクションのインデックスと行のインデックスが格納されている。
+    // これによりTableViewが要求しているセルを特定することができる。
+    // UITableViewDataSourceプロトコルを使用する場合は、必ずこのメソッドを実装する必要がある。
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if(cell == nil){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    NSLog(@"indexPath section,row [%d, %d]" , indexPath.section, indexPath.row);
+    cell.textLabel.text = [dates objectAtIndex:indexPath.section];
     
     return cell;
 }
